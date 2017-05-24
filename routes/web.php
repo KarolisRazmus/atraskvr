@@ -16,7 +16,9 @@ Route::get('/', function () {
 });
 
 
-Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'check-role-super-admin']], function () {
+Route::group(['prefix' => 'admin',
+//'middleware' => ['auth', 'check-role-super-admin']
+], function () {
 
     Route::group(['prefix' => 'categories_translations'], function () {
 
