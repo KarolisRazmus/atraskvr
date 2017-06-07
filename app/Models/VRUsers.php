@@ -32,17 +32,16 @@ class VRUsers extends Authenticatable
         });
     }
 
-
     public function connection()
     {
         return $this->belongsToMany(VRRoles::class, 'vr_users_roles_connections', 'users_id', 'roles_id');
     }
 
-
     public function rolesConnections()
     {
         return $this->hasMany(VRUsersRolesConnections::class, 'users_id', 'id');
     }
+
     public function getFillable()
     {
 
